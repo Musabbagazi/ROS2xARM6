@@ -1,0 +1,41 @@
+# Allow-list repository.
+#
+# Everything is ignored by default and the tracked files are opted back
+# in below. This is deliberate: the working folder also holds hundreds of
+# megabytes of capture images, training runs and logs, plus older v1/v2
+# scripts, and none of that belongs in the repo. Adding a new source file
+# means adding a "!" line for it here.
+
+*
+
+!.gitignore
+!README.md
+!requirements.txt
+
+# --- the pick application ---
+!vision_pick3.py
+!vision3.py
+!vision_common.py
+!detect_cube.py
+!camera_test.py
+
+# --- one-time setup / teaching tools ---
+!auto_calibrate3.py
+!teach_floor.py
+!teach_place.py
+!gripper_reset.py
+
+# --- training the cube detector ---
+!capture_dataset.py
+!train_cubes.py
+!audit_dataset.py
+!cube_model.pt
+
+# --- reference config for this cell (see README) ---
+!calib3.json
+!grip_ref.json
+!floor_ref.json
+
+# --- launchers ---
+!launchers/
+!launchers/*.bat

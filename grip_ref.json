@@ -1,0 +1,35 @@
+{
+  "note": "One-time grab reference. Redo ONLY if the camera mount, the fingers or the SCAN pose change.",
+  "scan_pose": [
+    450.0,
+    70.0,
+    580.0,
+    180.0,
+    0.0,
+    0.0
+  ],
+  "g0": [
+    602.4,
+    43.1,
+    200.0,
+    0.0
+  ],
+  "p0": [
+    391.0,
+    144.0
+  ],
+  "d0": 507.0,
+  "w0_mm": 37.0,
+  "w0_px": 44.0,
+  "angle0": 0.0,
+  "h0": 30.8,
+  "floor0": 537.8,
+  "stall0": 334,
+  "zC": 142.4,
+  "look_h": 180.0,
+  "p_look0": [
+    388.5,
+    379.7
+  ],
+  "d_look0": 303.0
+}

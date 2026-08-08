@@ -1,0 +1,25 @@
+{
+  "note": "Floor plane measured through an opaque sheet, for a surface the depth camera cannot see. Re-run teach_floor if the floor, the camera or the SCAN pose changes. Delete this file to measure the floor live instead.",
+  "coef": [
+    0.03476012616003629,
+    0.03485350700860135,
+    527.9676280280695
+  ],
+  "ref_z": 580.0,
+  "scan_pose": [
+    450.0,
+    70.0,
+    580.0,
+    180.0,
+    0.0,
+    0.0
+  ],
+  "centre_depth_mm": 547.5,
+  "tilt_mm": 38.9,
+  "tilt_fitted": true,
+  "coverage": [
+    0.99,
+    0.98
+  ],
+  "points": 143402
+}
