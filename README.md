@@ -1,5 +1,7 @@
 # xArm 6 — Dynamic Vision Pick & Place with Colour Priority
 
+*[النسخة العربية](README.ar.md)*
+
 An autonomous pick-and-place application for a **UFACTORY xArm 6** with an
 **Intel RealSense D435** mounted on the wrist (eye-in-hand). The arm finds
 cubes on the floor by itself, picks them up, and sorts them by colour:
