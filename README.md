@@ -17,6 +17,10 @@ angle and gripper width are all measured live from the depth image, so the
 same program handles cubes of different sizes anywhere in the cell, and it
 waits for a cube that is still being moved to hold still before committing.
 
+## Authors
+
+Designed and built by **Musab Bagazi** and **Yazan Bal'fakeeh**.
+
 ---
 
 ## How a pick works

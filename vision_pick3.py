@@ -23,6 +23,8 @@ cube_model.pt (capture_dataset.py + train_cubes.py, once).
 
 Usage: python vision_pick3.py [robot_ip]
 Keep the e-stop in hand. One y/N confirm, then it runs by itself.
+
+By Musab Bagazi and Yazan Bal'fakeeh.
 """
 import sys
 import time
