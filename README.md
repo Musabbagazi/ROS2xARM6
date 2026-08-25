@@ -130,3 +130,47 @@ look without moving, calibrate, dry-run, then move.
 
 **Keep the E-stop in your hand.** Every script that moves the arm asks
 for confirmation first and runs slowly by default. That is on purpose.
+
+---
+
+## Running it on a different arm
+
+This code drives a real robot. Read this before pointing it at yours.
+
+The numbers in `calib3.json`, `grip_ref.json`, `floor_ref.json` and
+`handeye.json` describe **this** cell — this camera mount, these fingers,
+this floor. They are tracked deliberately, as the provenance of the runs
+described in the READMEs, and they are **not portable**. On any other
+setup they must be re-measured with the teaching and calibration tools in
+each project (`teach_floor`, `auto_calibrate3`, `fixed_calibrate`), or the
+arm will confidently drive to the wrong place.
+
+The controller IP is hardcoded per project and will need changing. The
+xArm SDK, a RealSense camera and a CUDA-capable GPU (for project 2 only)
+are assumed.
+
+Every project ships offline checks that need neither the arm nor the
+camera. Run those first — they are the honest way to see what the code
+does before it can move anything:
+
+```
+cd 05-fixed-camera
+python test_fixed.py
+```
+
+## Status, honestly
+
+Projects 1 and 2 have done real work on hardware. Project 3 ran but never
+completed a take. Project 4 has never been run on the arm at all.
+Project 5 is blocked on a calibration error larger than the suction cup
+can tolerate. Project 6 is a design record with measurement tooling and
+has not picked anything. Each README says so in its own opening lines.
+
+## License
+
+[MIT](LICENSE) — © 2026 Musab Bagazi and Yazan Bal'fakeeh. Use it, change
+it, build on it; keep the copyright notice.
+
+The trained model and the 233-frame dataset are covered by the same
+licence. If the work is useful in something you publish, a citation of
+the two authors above is appreciated.
