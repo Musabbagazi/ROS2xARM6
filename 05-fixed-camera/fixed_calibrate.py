@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Hand-eye calibration for a fixed camera and a vacuum cup (eye-to-hand).
 
 THE ARM MOVES. Keep the e-stop in hand.

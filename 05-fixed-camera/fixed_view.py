@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Watch the fixed-camera detector work. NOTHING MOVES.
 
 No arm connection is made at all, so this is safe to run at any time,

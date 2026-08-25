@@ -4,8 +4,11 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_JUSTIFY
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Paragraph, HRFlowable
+import os
+_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "reports")
+os.makedirs(_OUT, exist_ok=True)
 
-doc = SimpleDocTemplate("G:/ROS 2/xarm6_week8_report_brief.pdf", pagesize=A4,
+doc = SimpleDocTemplate(os.path.join(_OUT, "xarm6_week8_report_brief.pdf"), pagesize=A4,
                         topMargin=1.7*cm, bottomMargin=1.7*cm,
                         leftMargin=2.2*cm, rightMargin=2.2*cm,
                         title="Week 8 Report")

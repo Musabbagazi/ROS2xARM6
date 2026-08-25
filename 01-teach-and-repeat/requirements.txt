@@ -1,0 +1,6 @@
+# These scripts run INSIDE the WSL Ubuntu-24.04 distro, not on Windows.
+# The .bat files in launchers\ call into it. Nothing here needs a camera.
+#
+#   wsl -d Ubuntu-24.04 -- python3 -m pip install -r requirements.txt
+
+xarm-python-sdk==1.18.4

@@ -1,0 +1,13 @@
+# Windows-native Python 3.12 — same set as 02-vision-pick, which this
+# project imports from read-only (calib3.json and grip_ref.json).
+#
+#   python -m pip install --user -r requirements.txt
+#
+# torch is NOT listed; install it from the CUDA index before ultralytics
+# or you get the CPU-only build. See ../02-vision-pick/requirements.txt.
+
+numpy==2.4.4
+opencv-python==5.0.0.93
+pyrealsense2==2.58.3.10794
+xarm-python-sdk==1.18.4
+ultralytics==8.4.103

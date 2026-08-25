@@ -62,7 +62,13 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-VISION = os.path.join(os.path.dirname(HERE), "vision")
+# The vision picker is "02-vision-pick" in the repository layout and
+# "vision" in the original standalone tree. Accept either, so this
+# file works checked out from git and in place on the cell PC.
+for _n in ("02-vision-pick", "vision"):
+    VISION = os.path.join(os.path.dirname(HERE), _n)
+    if os.path.isdir(VISION):
+        break
 if VISION not in sys.path:
     sys.path.insert(0, VISION)          # reuse vision\ without copying it
 

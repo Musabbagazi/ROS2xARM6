@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Teach the support surface, once, in the robot's frame.
 
 CAMERA ONLY - THE ARM IS NEVER COMMANDED BY THIS SCRIPT.

@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Pick cubes with a fixed camera and a vacuum cup. THE ARM MOVES.
 
 This is the stationary-cube picker: the first half of the project. The

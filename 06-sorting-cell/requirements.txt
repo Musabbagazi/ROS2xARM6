@@ -1,0 +1,9 @@
+# Windows-native Python 3.12. No trained model here — this project reads
+# depth and colour directly, so ultralytics is deliberately absent.
+#
+#   python -m pip install --user -r requirements.txt
+
+numpy==2.4.4
+opencv-python==5.0.0.93
+pyrealsense2==2.58.3.10794
+xarm-python-sdk==1.18.4

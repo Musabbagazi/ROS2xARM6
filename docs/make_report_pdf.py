@@ -4,9 +4,12 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_JUSTIFY
 from reportlab.lib import colors
 from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer,
+import os
+_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "reports")
+os.makedirs(_OUT, exist_ok=True)
                                 HRFlowable)
 
-doc = SimpleDocTemplate("G:/ROS 2/xarm6_report.pdf", pagesize=A4,
+doc = SimpleDocTemplate(os.path.join(_OUT, "xarm6_report.pdf"), pagesize=A4,
                         topMargin=1.7*cm, bottomMargin=1.7*cm,
                         leftMargin=2.2*cm, rightMargin=2.2*cm,
                         title="Week 4 Report")
@@ -84,4 +87,4 @@ S.append(Paragraph(
     "red cube, go to it, and pick it up entirely on its own.", body))
 
 doc.build(S)
-print("PDF written: G:/ROS 2/xarm6_report.pdf")
+print("PDF written: %s" % os.path.join(_OUT, "xarm6_report.pdf"))
