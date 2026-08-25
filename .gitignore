@@ -1,0 +1,28 @@
+# Runtime output. The working folders accumulate hundreds of megabytes of
+# capture images, annotated previews, training runs and logs, and every
+# project here writes into them. None of that belongs in the repo.
+__pycache__/
+*.pyc
+*.cache
+logs/
+captures/
+runs/
+backup_*/
+
+# Dataset: images/ and labels/ ARE tracked (233 labelled frames — the
+# data the cube detector was trained on). The preview and suspect folders
+# are annotated throwaways, ~91 MB, and are not.
+dataset/preview/
+dataset/suspect/
+
+# Pretrained YOLO bases. Re-downloadable from Ultralytics, not ours.
+# The two models we trained are tracked: 02-vision-pick/cube_model.pt
+# (current) and 02-vision-pick/models/cube_model_v8n.pt (previous).
+yolo26n.pt
+yolov8n.pt
+cube_model_prev.pt
+
+# Environments and archives
+.pixi/
+.venv/
+*.zip

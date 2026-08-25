@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\setlist{nosep}
+
+\title{\vspace{-1.5cm}\textbf{Working with the xArm 6 Robot Arm}}
+\author{Project Report}
+\date{\today}
+
+\begin{document}
+\maketitle
+\vspace{-0.8cm}
+
+\section*{What We Set Out to Do}
+
+The goal was to teach a robot arm (the xArm~6) to do useful jobs on its own.
+We started simple: pick up a box from one place and set it down in another.
+Then we made it smarter: use a camera so the arm can \emph{see} a red cube,
+figure out where it is and how big it is, go to it by itself, and pick it up.
+
+\section*{Step One: Pick and Place}
+
+First we taught the arm two spots by hand --- where to grab the box, and where
+to put it down. We then wrote a simple program so that, with one click, the arm
+would move to the box, close its gripper, carry it across, and release it, then
+return to its resting position. To make this easy, everything was set up as
+click-to-run buttons on the desktop, so no typing is needed.
+
+\section*{The Problems We Ran Into (and Fixed)}
+
+The arm did not work perfectly at first, and each problem taught us something:
+
+\begin{itemize}
+  \item \textbf{The arm kept stopping suddenly.} It turned out the arm did not
+        know how heavy its own gripper was, so it \emph{thought} it was bumping
+        into something and stopped for safety. Once we told it the gripper's
+        weight, this stopped happening.
+  \item \textbf{It froze when reaching too far.} Some target spots were near the
+        very edge of how far the arm can stretch. We changed the way it moves so
+        it takes smoother paths and checks in advance that it can actually reach
+        a spot before trying.
+  \item \textbf{The gripper sat crooked.} We straightened it and set its
+        resting angle to a clean zero.
+\end{itemize}
+
+Every version of the program was carefully double-checked for mistakes before
+being used, since a real robot is involved and safety comes first.
+
+\section*{Step Two: Giving the Arm Eyes}
+
+Next we added a small depth camera to the arm's wrist so it could find a red
+cube by itself. The arm learns the link between what the camera sees and where
+things really are by making a couple of small test moves and watching how the
+view changes --- it calibrates itself, instead of us measuring by hand. It also
+adjusts its grip to match the size of each cube automatically.
+
+To make the fiddly steps easier, we set it up so the arm can be driven around
+with the keyboard (like a simple game) instead of typing in numbers.
+
+\section*{Where Things Stand Now}
+
+The camera can reliably spot the red cube and measure it. The arm connects and
+moves safely, with several protections built in so it stops cleanly and reports
+plainly if anything goes wrong. The final calibration step --- lining the
+fingers up around the cube once so the arm learns its reference --- is the last
+piece to complete before fully hands-free, automatic picking is ready to run.
+
+\end{document}

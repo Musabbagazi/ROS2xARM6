@@ -1,0 +1,13 @@
+# Default: let git normalise line endings in text files.
+* text=auto
+
+# Binaries — never touch these. Git guessed wrong about the PDFs and the
+# model weights on Windows, and CRLF conversion would corrupt them.
+*.pt   binary
+*.pdf  binary
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+
+# Windows launchers must keep CRLF or cmd.exe mis-parses them.
+*.bat text eol=crlf

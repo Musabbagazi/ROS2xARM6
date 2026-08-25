@@ -1,0 +1,46 @@
+{
+  "R": [
+    [
+      0.9940275925681562,
+      -0.0442311303616966,
+      0.09976348189634919
+    ],
+    [
+      -0.09874070483088347,
+      -0.753815010604434,
+      0.6496254328433708
+    ],
+    [
+      0.04646954295726315,
+      -0.6555963215991708,
+      -0.7536803332202454
+    ]
+  ],
+  "t": [
+    384.16376770082434,
+    -468.8671333553221,
+    695.4596585902027
+  ],
+  "rms_mm": 16.7,
+  "max_mm": 32.48,
+  "best_scale": 0.93752,
+  "n": 12,
+  "residuals_mm": [
+    17.13,
+    7.52,
+    9.42,
+    5.19,
+    9.62,
+    32.48,
+    24.14,
+    6.53,
+    15.7,
+    17.64,
+    6.99,
+    22.4
+  ],
+  "tool": "vacuum cup",
+  "method": "touch (seal-confirmed contact on cubes)",
+  "made": "2026-08-12 12:08:25",
+  "note": "Fitted from cubes measured on the floor and touched by the cup, the seal confirming contact. Maps a camera-frame point to the FLANGE pose that puts the cup on it - see fixed_common, 'the grasp frame'."
+}

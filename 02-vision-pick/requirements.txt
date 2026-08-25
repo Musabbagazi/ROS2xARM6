@@ -1,0 +1,19 @@
+# Windows-native Python 3.12. Everything here runs on Windows directly,
+# not under WSL: the RealSense camera is on a Windows USB port and the
+# xArm SDK talks plain TCP to the controller.
+#
+#   python -m pip install --user -r requirements.txt
+#
+# torch is NOT listed. Install it first, from the CUDA index, or
+# `pip install ultralytics` will silently pull the CPU-only build:
+#
+#   python -m pip install --user torch torchvision \
+#       --index-url https://download.pytorch.org/whl/cu126
+#
+# Verified working set (RTX 4060 Laptop 8GB, torch 2.13.0+cu126):
+
+numpy==2.4.4
+opencv-python==5.0.0.93
+pyrealsense2==2.58.3.10794
+xarm-python-sdk==1.18.4
+ultralytics==8.4.103

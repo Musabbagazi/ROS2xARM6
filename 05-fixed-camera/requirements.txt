@@ -1,0 +1,18 @@
+# Fixed-camera picker - Windows-native Python 3.12.
+#
+#   python -m pip install --user -r requirements.txt
+#
+# NOTE WHAT IS NOT HERE: ultralytics and torch.
+#
+# The wrist-mounted pipeline needed a trained YOLO model to say "there is
+# a cube there", because in a camera image that is a question about
+# appearance. With a fixed camera it is a question about geometry - "are
+# there points more than 8mm above the taught surface" - and geometry
+# needs no training set, no GPU, and nothing to retrain when the lighting
+# or the floor changes. That removes about 2.5GB of dependency and the
+# single most fragile part of the old setup.
+
+numpy
+opencv-python
+pyrealsense2
+xarm-python-sdk
